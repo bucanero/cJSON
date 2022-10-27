@@ -35,7 +35,7 @@ INCLUDE		:=	./
 DATA		:=	data
 LIBS		:=	 
 
-CFLAGS      += -cc1 -triple x86_64-pc-freebsd-elf -munwind-tables -fuse-init-array -emit-obj -isysroot $(OO_PS4_TOOLCHAIN) -isystem $(OO_PS4_TOOLCHAIN)/include $(INCLUDES) -DMZ_PLATFORM=PS4
+CFLAGS      += -cc1 -triple x86_64-pc-freebsd-elf -munwind-tables -emit-obj -isysroot $(OO_PS4_TOOLCHAIN) -isystem $(OO_PS4_TOOLCHAIN)/include $(INCLUDES) -DMZ_PLATFORM=PS4
 CXXFLAGS    += $(CFLAGS) -isystem $(OO_PS4_TOOLCHAIN)/include/c++/v1
 
 ifneq ($(BUILD),$(notdir $(CURDIR)))
